@@ -13,14 +13,26 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
   },
+  navLink: {
+    marginLeft: theme.spacing(4),
+    textDecoration: "none",
+    color: "#002bff",
+    "&:hover": {
+      color: "##ab00",
+    },
+  },
 }));
+
 export default function Navbar() {
+  const className = useStyles();
   return (
     <AppBar position="static">
-      <Toolbar className="Toolbar">
+      <Toolbar className={className.Toolbar}>
         <Typography variant="h4">Recipe App</Typography>
         <Typography variant="h5" component="nav">
-          <Link to="/">Home</Link>
+          <Link to="/" className={className.navLink}>
+            Home
+          </Link>
         </Typography>
       </Toolbar>
     </AppBar>
