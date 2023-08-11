@@ -30,8 +30,8 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" Component={RecipeList} />
-          <Route path="/recipe/:id" Component={Recipe} />
+          <Route path="/" element={<RecipeList />} />
+          <Route path="/recipe/:id" element={<Recipe />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
