@@ -40,7 +40,7 @@ export default function RecipeList() {
         {recipes.map((recipes) => (
           <Card
             key={recipes.Id}
-            onclick={() => navigate(`/recipe/${recipes.Id}`)}
+            onClick={() => navigate(`/recipe/${recipes.Id}`)}
             className={className.Card}
           >
             <CardMedia
