@@ -8,28 +8,30 @@ import {
   Container,
   Typography,
 } from "@mui/material";
-import { Title } from "@material-ui/icons";
 
 export default function Recipe() {
-  const { Id } = useParams();
-  const Recipes = recipes.find((item) => item.Id == Id, Recipe.Title == Title);
+  const { id } = useParams();
+  console.log(id);
+  const Recipes = recipes.find((item) => item.Id == id);
+  console.log(Recipes);
   return (
     <Container maxWidth="md">
       <Card>
         <CardMedia
-          component="img"
-          image={recipes.Image}
-          title={recipes.Title}
+          element="img"
+          image
+          src={Recipes.Image}
+          title={Recipes.Title}
         />
         <CardContent>
           <Typography
             gutterBottom
-            varient="h5"
-            component="h5"
+            varient="h4"
+            component="h4"
             style={{ textAlign: "center" }}
           >
-            {recipes.Title}
-            {recipes.Image}
+            {Recipes.Image}
+            <p> {Recipes.Title} </p>
           </Typography>
         </CardContent>
       </Card>
