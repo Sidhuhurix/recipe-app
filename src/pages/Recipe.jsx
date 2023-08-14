@@ -18,9 +18,8 @@ export default function Recipe() {
     <Container maxWidth="md">
       <Card>
         <CardMedia
-          element="img"
-          image
-          src={Recipes.Image}
+          component="img"
+          image={Recipes.Image}
           title={Recipes.Title}
         />
         <CardContent>
