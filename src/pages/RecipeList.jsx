@@ -1,8 +1,9 @@
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import React from "react";
-import { recipes } from "../data";
+// import { recipes } from "../data";
 import { makeStyles } from "@mui/styles";
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const useStyles = makeStyles({
   cardList: {
@@ -31,6 +32,19 @@ const useStyles = makeStyles({
 export default function RecipeList() {
   const className = useStyles();
   const navigate = useNavigate();
+  const [recipes, setRecipes] = useState([]);
+
+  useEffect(() => {
+    fetch("https://64c3961867cfdca3b65fef6d.mockapi.io/recipes")
+      .then((response) => response.json())
+      .then((data) => {
+        setRecipes(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+
   return (
     <div>
       <Typography varient="h5" align="center" gutterBottom>

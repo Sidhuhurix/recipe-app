@@ -5,6 +5,7 @@ import Navbar from "./assets/Navbar";
 import RecipeList from "./pages/RecipeList";
 import Recipe from "./pages/Recipe";
 import Welcome from "./pages/Welcome";
+import "./App.css";
 
 // import { create } from "json-server";
 import { ThemeProvider, createTheme } from "@mui/material";
