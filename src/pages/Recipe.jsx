@@ -21,6 +21,7 @@ export default function Recipe() {
           component="img"
           image={Recipes.Image}
           title={Recipes.Title}
+          ingredients={Recipes.Ingredients}
         />
         <CardContent>
           <Typography
@@ -29,9 +30,13 @@ export default function Recipe() {
             component="h4"
             style={{ textAlign: "center" }}
           >
-            {Recipes.Image}
             <p> {Recipes.Title} </p>
           </Typography>
+          <Typography variant="h6" component="h6">
+            Ingredients:
+          </Typography>
+
+          <div></div>
         </CardContent>
       </Card>
     </Container>
