@@ -33,6 +33,9 @@ export default function Navbar() {
           <Link to="/" className={className.navLink}>
             Home
           </Link>
+          <Link to="/recipe" className={className.navLink}>
+            Recipes
+          </Link>
         </Typography>
       </Toolbar>
     </AppBar>

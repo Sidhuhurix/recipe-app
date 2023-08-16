@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./assets/Navbar";
 import RecipeList from "./pages/RecipeList";
 import Recipe from "./pages/Recipe";
+import Welcome from "./pages/Welcome";
 
 // import { create } from "json-server";
 import { ThemeProvider, createTheme } from "@mui/material";
@@ -30,8 +31,9 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<RecipeList />} />
+          <Route path="/recipe" element={<RecipeList />} />
           <Route path="/recipe/:id" element={<Recipe />} />
+          <Route path="/" element={<Welcome />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
