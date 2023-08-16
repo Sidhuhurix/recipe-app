@@ -35,6 +35,7 @@ function App() {
           <Route path="/recipe" element={<RecipeList />} />
           <Route path="/recipe/:id" element={<Recipe />} />
           <Route path="/" element={<Welcome />} />
+          <Route path="/" element={<AddRecipe />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
